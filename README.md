@@ -4,6 +4,12 @@ A **one-prompt replication attempt** of the AI achievement reported by Donald Kn
 
 This repository documents our attempt to reproduce — in a single agentic session — the Hamiltonian cycle decomposition for 3D Cayley digraphs on **Z_m³** that Claude originally discovered through 31 guided explorations with Filip Stappers.
 
+<p align="center">
+  <img src="claudes_cycles.gif" alt="Animation of 3 Hamiltonian cycles on Z_3³" width="500">
+  <br>
+  <em>Three disjoint Hamiltonian cycles decomposing all 81 arcs of the Cayley digraph on Z₃³</em>
+</p>
+
 ## Background: The Original Achievement
 
 In early 2026, **Filip Stappers** fed an open conjecture from Donald Knuth to Claude Opus 4.6 and, over 31 guided explorations (~1 hour), Claude discovered a working construction. Knuth then wrote the formal proof and named the paper after the AI.
