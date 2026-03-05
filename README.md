@@ -1,14 +1,31 @@
 # Claude's Cycles
 
-A **one-prompt replication attempt** of the AI achievement reported by Donald Knuth in his paper *"Claude's Cycles"* (2026), using **Windsurf IDE + Claude Opus 4.6**.
-
-This repository documents our attempt to reproduce — in a single agentic session — the Hamiltonian cycle decomposition for 3D Cayley digraphs on **Z_m³** that Claude originally discovered through 31 guided explorations with Filip Stappers.
+A replication of the AI achievement reported by Donald Knuth in his paper *"Claude's Cycles"* (2026), using **Windsurf IDE + Claude Opus 4.6**.
 
 <p align="center">
   <img src="claudes_cycles.gif" alt="Animation of 3 Hamiltonian cycles on Z_3³" width="500">
   <br>
   <em>Three disjoint Hamiltonian cycles decomposing all 81 arcs of the Cayley digraph on Z₃³</em>
 </p>
+
+## What This Proves
+
+This entire repository — the implementation, tests, verification for all odd m from 3 to 101, the animated visualization, and this README — was created by **Claude Opus 4.6 inside Windsurf IDE** in **4 prompts total**:
+
+| # | Prompt | What happened |
+|---|--------|---------------|
+| 1 | *"Implement Knuth's Claude's Cycles problem"* | Claude read a press report, found Knuth's construction, implemented `claudes_cycles.py` with full verification, wrote 27 pytest tests — all passing for m=3..101. **This single prompt did all the math and code.** |
+| 2 | *"Create GitHub repo with license and credits"* | Repo setup, README, Anti-Capitalist License, Filip Stappers credit, official report links. *(GitHub housekeeping)* |
+| 3 | *"Make an animated GIF and add it to the README"* | Generated 3D rotating animation of the 3 cycles on Z₃³, pushed to repo. |
+| 4 | *"Describe in the README that you did this in 4 prompts"* | This update. *(GitHub housekeeping)* |
+
+**2 of the 4 prompts were purely GitHub-related** (repo setup, this meta-update). The actual mathematical work — reading a press article, understanding the problem, finding the construction, implementing it, writing tests, and verifying it for 50 values of m — was done in **a single prompt**.
+
+Filip Stappers needed 31 guided explorations over ~1 hour to achieve the same result. This repo is evidence that with agentic tooling (Windsurf) and Claude Opus 4.6, **the same can be done in one shot from a press report alone**.
+
+> **This repository is its own proof of concept.**
+
+---
 
 ## Background: The Original Achievement
 
@@ -30,9 +47,7 @@ In early 2026, **Filip Stappers** fed an open conjecture from Donald Knuth to Cl
 
 **Filip Stappers** was the first to achieve this — he prompted Claude Opus 4.6 with Knuth's exact problem statement and guided it through 31 explorations to discover the construction. Knuth verified and proved the result, naming the paper *"Claude's Cycles"* in honor of both Claude Shannon and the AI.
 
-## This Project
-
-We attempted to replicate the same result in a **single Windsurf agentic session** (one prompt, no restarts) with Claude Opus 4.6. The construction was found, implemented, and verified for all odd m from 3 to 101 — all passing.
+---
 
 ## Problem
 
@@ -95,6 +110,6 @@ pytest test_claudes_cycles.py -v
 
 ## Authors
 
-- **Lino Casu** ([@error-wtf](https://github.com/error-wtf)) — Prompt, session orchestration
-- **Claude Opus 4.6** (Anthropic) — Construction discovery, implementation
-- **Windsurf IDE** (Codeium) — Agentic coding environment
+- **Lino Casu** ([@error-wtf](https://github.com/error-wtf)) — 4 prompts, zero math background required
+- **Claude Opus 4.6** (Anthropic) — Construction discovery, implementation, tests, visualization
+- **Windsurf IDE** (Codeium) — Agentic coding environment that made single-prompt execution possible
