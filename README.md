@@ -10,7 +10,7 @@ A replication of the AI achievement reported by Donald Knuth in his paper *"Clau
 
 ## What This Proves
 
-This entire repository — the implementation, tests, verification for all odd m from 3 to 101, the animated visualization, and this README — was created by **Claude Opus 4.6 inside Windsurf IDE** in **6 prompts total**:
+This entire repository — the implementation, tests, verification for all odd m from 3 to 101, the animated visualization, and this README — was created by **Claude Opus 4.6 inside Windsurf IDE** in **7 prompts total**:
 
 | # | Prompt | What happened |
 |---|--------|---------------|
@@ -19,9 +19,10 @@ This entire repository — the implementation, tests, verification for all odd m
 | ~~3~~ | *(manual stop)* | Same issue — Sequential Thinking broken, manual restart required. |
 | 4 | *"Create GitHub repo with license and credits"* | Repo setup, README, Anti-Capitalist License, Filip Stappers credit, official report links. *(GitHub housekeeping)* |
 | 5 | *"Make an animated GIF and add it to the README"* | Generated 3D rotating animation of the 3 cycles on Z₃³, pushed to repo. |
-| 6 | *"Describe what happened and correct the prompt count"* | This update. *(GitHub housekeeping)* |
+| 6 | *"Correct the prompt count"* | Updated README from 4 to 6 prompts. *(GitHub housekeeping)* |
+| 7 | *"Upload, commit, and finalize the repo"* | Final sync, cleanup, and this update. *(GitHub housekeeping)* |
 
-**Of the 6 prompts, 2 were manual stops** (broken MCP tool, not Claude's fault) **and 2 were purely GitHub-related** (repo setup, this meta-update). The actual mathematical work — reading a press article, understanding the problem, finding the construction, implementing it, writing tests, and verifying it for 50 values of m — was done in **a single prompt**.
+**Of the 7 prompts, 2 were manual stops** (broken MCP tool, not Claude's fault) **and 3 were purely GitHub-related** (repo setup, corrections, finalization). The actual mathematical work — reading a press article, understanding the problem, finding the construction, implementing it, writing tests, and verifying it for 50 values of m — was done in **a single prompt**.
 
 Filip Stappers needed 31 guided explorations over ~1 hour to achieve the same result. This repo is evidence that with agentic tooling (Windsurf) and Claude Opus 4.6, **the same can be done in one shot from a press report alone**.
 
@@ -112,6 +113,6 @@ pytest test_claudes_cycles.py -v
 
 ## Authors
 
-- **Lino Casu** ([@error-wtf](https://github.com/error-wtf)) — 6 prompts (2 manual stops, 2 housekeeping), zero math background required
+- **Lino Casu** ([@error-wtf](https://github.com/error-wtf)) — 7 prompts (2 manual stops, 3 housekeeping), zero math background required
 - **Claude Opus 4.6** (Anthropic) — Construction discovery, implementation, tests, visualization
 - **Windsurf IDE** (Codeium) — Agentic coding environment that made single-prompt execution possible
